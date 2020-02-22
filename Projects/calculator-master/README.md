@@ -1,4 +1,4 @@
-#Calculator
+# Calculator
 
 Usage:  ```python3 calc.py```
 
@@ -96,12 +96,7 @@ Now that the root node has the results of its operands, it returns its result:
 
  ![Expression tree](doc/img/expr-eval-7.png)
  
-##What you must do
+## What you must do
 
 As you can see, most of the work of representing and evaluating expressions is in classes like *Plus*, *Times*, etc., in file *expr.py*.  They are called *binary operators* because they take two operands.  Further guidance can be found in the [project description](https://classes.cs.uoregon.edu/18S/cis211/projects/calculator.php). 
-
-
-
-
-
 

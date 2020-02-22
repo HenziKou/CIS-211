@@ -1,4 +1,4 @@
-# README #
+# Line Approximation
 
 Apply Douglas-Peucker line simplification algorithm and display 
 the before and after version. Python 3. 

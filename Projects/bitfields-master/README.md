@@ -1,4 +1,4 @@
-# bitfields
+# Bitfields
 Packing and extracting bit fields in Python integers. 
 This is the first in a series of projects in which we will build and program a simulated computer, the Duck Machine 2018S, or DM2018S.  
 

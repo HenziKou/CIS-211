@@ -1,8 +1,8 @@
-#FiveTwelve
+# FiveTwelve
 
 FiveTwelve is a sliding tile game based on 2048, with a few changes.  2048 was itself based on an earlier game called 1024, which (so legend says) was inspired by an earlier sliding tile game.  
 
-##Game Play
+## Game Play
 
 The game is played on a 4x4 grid. Initially tiles containing the value 2 are placed randomly on the grid.  In each turn, the player may move all the tiles left, right, up, or down.  Tiles will slide as far as possible in the indicated direction, stopping when they reach an edge of the grid or when they meet a tile with a different value.  If a tile meets another tile with the same value, it absorbs the other tile (adding the value of the other tile to its own, thereby doubling), and *continues moving*. 
 
@@ -25,7 +25,7 @@ _ 2 4 8
 
 After each move, a new tile with value 2 is placed in a random open square on the grid.  When there is no open square to place the new tile, the game is over and the player's score is the sum of all tiles on the board.  
 
-##Differences from 2048
+## Differences from 2048
 
 The game play should be familiar to those who have played 1024, but there are a few differences. 
 
@@ -51,10 +51,10 @@ The player may choose to slide the tiles right, but no tile can move farther to 
 * New tiles all have value 2. In 2048, there is a 10% probability of a new tile having value 4. 
 * You can never win.  Because FiveTwelve is like life.  You just keep adding to your score until gameplay ends. 
 
-##Known bugs and limitations
+## Known bugs and limitations
 * You must click the FiveTwelve window with a pointing device to send keystrokes to the game.  
 
-##Implementation notes: MVC
+## Implementation notes: MVC
 
 FiveTwelve follows a Model-View-Controller (MVC) organization or *design pattern*.   The model component (model.py) contains all the game logic and data structures.  The model component has no direct dependencies on the view or controller components, but each element of the model component permits registration of *listeners* and announces significant events to its listeners.
 
@@ -68,9 +68,9 @@ The current view component uses Zelle's graphics module (graphics/graphics.py), 
 
 Most changes to game logic in model.py should also be possible without changing view.py. For example, adopting the 2048 rule regarding merging (only one merge per tile per move) should require no change to view.py.  Adopting the 2048 rule regarding ineffective moves would require small changes to model.py and controller.py but no change to view.py or keypress.py.  This independence is the point of MVC organization. 
 
-##What students must program
+## What students must program
 
- We have provided the logic for sliding a tile in a given direction, encoded in a 'movement vector' (dx, dy), until it either reaches the edge of the grid, reaches another tile and stops, or reaches another matching tile and merges with it. Each of the four possible moves (slide left, slide right, slide up, slide down) requires triggering the slide for each tile, in the proper order. You will need to slide each tile in the proper order. Recall again that a slide right starting with
+We have provided the logic for sliding a tile in a given direction, encoded in a 'movement vector' (dx, dy), until it either reaches the edge of the grid, reaches another tile and stops, or reaches another matching tile and merges with it. Each of the four possible moves (slide left, slide right, slide up, slide down) requires triggering the slide for each tile, in the proper order. You will need to slide each tile in the proper order. Recall again that a slide right starting with
 ````
 2 4 4 4
 ````
