@@ -1,0 +1,11 @@
+#
+# Sum the a series of input values, stopping when
+# the input is zero.
+#
+sum = 0 ;
+x = in ;
+while x do
+   sum = sum + x ;
+   x = in ;
+od
+out = sum ; 

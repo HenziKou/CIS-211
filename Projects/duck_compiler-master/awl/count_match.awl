@@ -1,0 +1,22 @@
+0#
+# It's pretty hard to make good use of 'if' statements
+# without better comparisons ... but I can at least
+# test for equality by subtracting.
+#
+# In this program, the first input is a value to "watch for"
+# in a sequence.  In the rest of the sequence, we count
+# occurrences of that value.  The sequence ends with 0.
+# We print the count of occurrences of that value.
+#
+watch = in ;
+count = 0 ;
+observe = in ;
+while observe do
+    if watch - observe then
+        # do nothing
+    else
+        count = count + 1 ;
+    fi
+    observe = in ;
+od
+out = count ;

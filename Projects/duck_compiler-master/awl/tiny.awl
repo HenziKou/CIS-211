@@ -1,0 +1,6 @@
+#
+# This tiny program will print 42 if run in the
+# interpreter.  But if you run it in the compiler,
+# most of the code will be missing.
+#
+out = 20 + 22 ;
